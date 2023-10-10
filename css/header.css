@@ -1,0 +1,92 @@
+.header {
+    grid-area: header;
+    background-color: #066152;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav ul {
+      list-style: none;
+  }
+  
+  nav li {
+      display: inline;
+      margin-right: 20px;
+  }
+  
+  nav a {
+      text-decoration: none;
+      color: #fff;
+  }
+  
+  .nav-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .nav {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-menu li a:hover {
+    color: #f39c12;
+  }
+
+  /* Additional styles for smaller screens */
+@media (max-width: 768px) {
+    .nav {
+      display: none;
+    }
+  
+    .header {
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .nav-toggle {
+      display: block;
+    }
+  
+    .nav-menu.active {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #555;
+      width: 100%;
+      z-index: 1000;
+    }
+  
+    .nav-menu li {
+      padding: 1rem;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .post-card{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;  
+    }
+  }
